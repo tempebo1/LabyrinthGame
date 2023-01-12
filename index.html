@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>labyrinth Game</title>
+</head>
+
+<body class="animate">
+    <div>
+        <img id="T" src="T.png" hidden>
+        <img id="bend" src="bend.png" hidden>
+        <img id="straight" src="straight.png" hidden>
+    </div>
+    <div id="startPage"style="display: block;">
+        <h1>labyrinth game</h1>
+
+        <div id="setting">
+            <h2>instructions</h2>
+            <p>The rooms int maze are symbolized by a 7x7 square grid cells. For each room we know that which wall has a
+                door. If there are two doors in the contact wall of two neighbouring rooms, you can go from one room to
+                another. The even rows and columns
+                in the grid can be slided, the other rooms are fixed throughout the game. By sliding the rooms in the
+                grid, doors and passages open through which players can move in the maze. By cleverly sliding the rooms
+                players try to find their way
+                to the treasures. The first player to find all their treasures and return to the starting square is the
+                winner.</p>
+        </div>
+        <br>
+
+        <div id="setting">
+            <h2>Settings</h2>
+            <div id="options">
+                <label for="treasures">Number of treasures per player:&nbsp;</label>
+                <select name="treasures" id="treasures">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label for="players">Number of Players:&nbsp;</label>
+                <select name="players" id="players">
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <button id="start">Start</button>
+
+        </div>
+        <br>
+
+        <div id="setting">
+            <h2>Information</h2>
+
+            <p>There is no saved game</p>
+            <button id="load" >Load</button>
+        </div>
+
+    </div>
+
+    <div id="game" style="display: none;">
+
+        <div class="gameBase" width="100%">
+            <div id="wrapper" style="margin-left:auto; margin-right:auto;" width="100%">
+
+                <div id="middle" width="100%">
+                    <input class="restartGame" style="border-style: groove;border-width: 10px;" type="button"
+                        value="Restart">
+                    <input style="border-style: groove;border-width: 10px;" type="button" value="Save Game" class="save">
+
+
+                    <div id="c"
+                        style="margin-left:auto; margin-right:auto;margin-bottom: 0px;text-align: center;width: 10%;font-size: large">
+                    </div>
+                    <canvas id="mycanvas" width="1200%" height="625%" style="margin-left:auto; margin-right:auto">
+                        This text is displayed if your browser does not support HTML5 Canvas.
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game_over" style="display: none;margin-left: auto;margin-right: auto;">
+        <h2 class="Power" id="setting">Game Over!</h2>  <img id="winner"  hidden> <br>
+        <input class="restartGame2" style="border-style: groove;border-width: 10px;" type="button"
+        value="Restart">
+    
+    </div>
+
+    <script src="index.js"></script>
+    <script src="Render.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+    margin-top: 2%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Georgia;
+}
+
+h2,
+h1 {
+    margin-top: 0;
+}
+
+#setting {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#startPage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#setting {
+    flex-basis: 600px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 0.80);
+    border: rgb(14, 13, 13);
+    border-style: groove;
+    border-width: 10px;
+}
+
+#startPage {
+    flex-basis: 600px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 0.80);
+    border-width: 10px;
+}
+
+#options {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#options #treasures,
+#options #players {
+    margin-right: 8px;
+}
+
+#start,
+#load {
+    display: block;
+    margin: 10px auto;
+    font-size: 30px;
+    border-width: 7px;
+}
+
+@keyframes animations {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -400000px 300000px
+    }
+}
+
+.animate {
+    top: 0px;
+    left: 0px;
+    background-image: url("bagGround.jpg");
+    background-size: 600x;
+    background-repeat: repeat;
+    animation: animations 50000s linear infinite both;
+}
+
+.not-animate {
+    top: 0px;
+    left: 0px;
+    background-image: url("bagGround2.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
